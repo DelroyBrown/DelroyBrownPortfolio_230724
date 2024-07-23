@@ -1,6 +1,236 @@
 {% extends 'base.html' %}
+{% load static %}
 
 
 {% block content %}
-<h1>CONTACT PAGE</h1>
+
+<!--[if lte IE 9]>
+                <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+        <![endif]-->
+<!-- ==== preloader start ==== -->
+<div id="preloader">
+    <div id="loader"></div>
+</div>
+<!-- ==== / preloader end ==== -->
+<!-- ==== mouse cursor drag start ==== -->
+<div class="mouseCursor cursor-outer"></div>
+<div class="mouseCursor cursor-inner">
+    <span>Drag</span>
+</div>
+<!-- ==== / mouse cursor drag end ==== -->
+<!-- ==== page wrapper start ==== -->
+<div class="my-app">
+    <!-- HEADER -->
+    {% include 'home/includes/header.html' %}
+    <!-- MOBILE MENU -->
+    {% include 'home/includes/mobile_menu.html' %}
+    <!-- OFFSET INFO -->
+    {% include 'home/includes/offset_menu.html' %}
+    
+    <div id="smooth-wrapper">
+        <div id="smooth-content">
+            <main>
+                <!-- CONTACT BANNER -->
+                {% include 'contact/includes/contact_banner.html' %}
+                
+                <!-- ==== contact start ==== -->
+                <section class="section contact-m fade-wrapper">
+                    <div class="container">
+                        <div class="row gaper">
+                            <div class="col-12 col-sm-6 col-xl-3">
+                                <div class="contact-m__single topy-tilt fade-top">
+                                    <div class="thumb">
+                                        <img src="{% static 'images/phone.png' %}" alt="Image">
+                                    </div>
+                                    <div class="content">
+                                        <h4>Phone & Fax</h4>
+                                        <p>
+                                            <a href="tel:197-90-56-780">Mobile : +197-90-56-780</a>
+                                        </p>
+                                        <p>
+                                            <a href="tel:197-90-56-780">Fax : +44-208-1234567</a>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-6 col-xl-3">
+                                <div class="contact-m__single topy-tilt fade-top">
+                                    <div class="thumb">
+                                        <img src="{% static 'images/mail.png' %}" alt="Image">
+                                    </div>
+                                    <div class="content">
+                                        <h4>Mail Address</h4>
+                                        <p>
+                                            <a href="mailto:info.company@gmail.com">Info.company@gmail.com</a>
+                                        </p>
+                                        <p>
+                                            <a href="mailto:info.company@gmail.com">Info.company@yahoo.com</a>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-6 col-xl-3">
+                                <div class="contact-m__single topy-tilt fade-top">
+                                    <div class="thumb">
+                                        <img src="{% static 'images/location.png' %}" alt="Image">
+                                    </div>
+                                    <div class="content">
+                                        <h4>Our Location</h4>
+                                        <p>
+                                            <a href="https://www.google.com/maps/d/viewer?mid=1UZ57Drfs3SGrTgh6mrYjQktu6uY&hl=en_US&ll=18.672105000000013%2C105.68673800000003&z=17"
+                                                target="_blank">
+                                                85 Ketch Harbour
+                                                RoadBensalem, PA 19020
+                                            </a>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-6 col-xl-3">
+                                <div class="contact-m__single topy-tilt fade-top">
+                                    <div class="thumb">
+                                        <img src="{% static 'images/time.png' %}" alt="Image">
+                                    </div>
+                                    <div class="content">
+                                        <h4>Office Hour</h4>
+                                        <p>
+                                            Sun - Thu
+                                            09 am - 06pm
+                                        </p>
+                                        <p>
+                                            Fri - Sat
+                                            4 pm - 10pm
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="map-wrapper">
+                                    <div class="row gaper">
+                                        <div class="col-12 col-lg-6">
+                                            <div class="contact__map fade-top">
+                                                <iframe
+                                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d20342.411046372905!2d-74.16638039276373!3d40.719832743885284!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2sNew%20York%2C%20NY%2C%20USA!5e0!3m2!1sen!2sbd!4v1649562691355!5m2!1sen!2sbd"
+                                                    width="100" height="800" style="border:0;" allowfullscreen=""
+                                                    loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-lg-6">
+                                            <div class="contact-main__form  fade-top">
+                                                <h3>Leave A Message</h3>
+                                                <form action="#" method="post" class="section__content-cta">
+                                                    <div class="group-wrapper">
+                                                        <div class="group-input ">
+                                                            <input type="text" name="contact-name" id="contactName"
+                                                                placeholder="Name">
+                                                        </div>
+                                                        <div class="group-input ">
+                                                            <input type="email" name="contact-email" id="contactEmail"
+                                                                placeholder="Email">
+                                                        </div>
+                                                    </div>
+                                                    <div class="group-input ">
+                                                        <select class="subject">
+                                                            <option data-display="Subject">
+                                                                Subject
+                                                            </option>
+                                                            <option value="1">Account</option>
+                                                            <option value="2">Service</option>
+                                                            <option value="3">Pricing</option>
+                                                            <option value="4">Support</option>
+                                                        </select>
+                                                    </div>
+                                                    <div class="group-input ">
+                                                        <textarea name="contact-message" id="contactMessage"
+                                                            placeholder="Message"></textarea>
+                                                    </div>
+                                                    <div class="form-cta justify-content-start">
+                                                        <button type="submit" class="btn">
+                                                            Send Message
+                                                        </button>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- ==== / contact end ==== -->
+            </main>
+            <!-- ==== footer start ==== -->
+            <footer class="footer pt-120">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12">
+                            <div
+                                class="footer__intro d-flex align-items-center justify-content-center flex-column flex-sm-row justify-content-sm-between flex-wrap">
+                                <h2 class="title-xl text-quaternary fw-4 title-anim">Let's Work Together</h2>
+                                <h5 class="title-sm">SEND ME A MESSAGE</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row justify-content-center">
+                        <div class="col-12">
+                            <div class="footer__content text-center pt-120 pb-120">
+                                <h2 class="light-title-xl text-uppercase fw-5">
+                                    <a href="mailto:hello@exgridinfo.com" class="animated-text">hello@exgridinfo.com</a>
+                                </h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer__copyright" data-background="assets/images/footer-bg.png">
+                    <div class="container">
+                        <div class="row align-items-center gaper">
+                            <div class="col-12 col-lg-8">
+                                <div class="footer__copyright-text text-center text-lg-start">
+                                    <p class="text-senary tertiary-text">
+                                        &copy;
+                                        <span id="copyYear"></span>
+                                        . All Rights Reserved
+                                        <a href="index.html" class="fw-6">Exgrid</a>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col-12 col-lg-4">
+                                <div class="social justify-content-center justify-content-lg-end">
+                                    <a href="https://www.twitter.com/" target="_blank">
+                                        <i class="fa-brands fa-twitter"></i>
+                                    </a>
+                                    <a href="https://www.instagram.com/" target="_blank">
+                                        <i class="fa-brands fa-instagram"></i>
+                                    </a>
+                                    <a href="https://www.facebook.com/" target="_blank">
+                                        <i class="fa-brands fa-facebook-messenger"></i>
+                                    </a>
+                                    <a href="https://www.youtube.com/" target="_blank">
+                                        <i class="fa-brands fa-youtube"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+            <!-- ==== / footer end ==== -->
+        </div>
+    </div>
+</div>
+<!-- ==== / page wrapper end ==== -->
+<!-- ==== scroll to top start ==== -->
+<button class="progress-wrap" aria-label="scroll indicator" title="go to top">
+    <span></span>
+    <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+        <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
+    </svg>
+</button>
+<!-- ==== / scroll to top end ==== -->
+<!-- ==== js dependencies ==== -->
+<!-- jquery -->
+
 {% endblock %}
