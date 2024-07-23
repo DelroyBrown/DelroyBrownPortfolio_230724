@@ -7,4 +7,5 @@ urlpatterns = [
     path("admin/", admin.site.urls),
     path("", include("DelroyBrownPortfolio_home.urls")),
     path("", include("DelroyBrownPortfolio_about.urls")),
+    path("", include("DelroyBrownPortfolio_contact.urls")),
 ]

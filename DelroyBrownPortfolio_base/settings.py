@@ -22,6 +22,8 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     "DelroyBrownPortfolio_home",
+    "DelroyBrownPortfolio_about",
+    "DelroyBrownPortfolio_contact",
 ]
 
 MIDDLEWARE = [
