@@ -1,0 +1,79 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block content %}
+
+
+
+
+    <body>
+        <!-- ==== preloader start ==== -->
+        <div id="preloader">
+            <div id="loader"></div>
+        </div>
+        <!-- ==== / preloader end ==== -->
+        <!-- ==== mouse cursor drag start ==== -->
+        <div class="mouseCursor cursor-outer"></div>
+        <div class="mouseCursor cursor-inner">
+            <span>Drag</span>
+        </div>
+        <!-- ==== / mouse cursor drag end ==== -->
+        <!-- ==== page wrapper start ==== -->
+        <div class="my-app">
+            <!-- HEADER -->
+            {% include 'home/includes/header.html' %}
+            <!-- MOBILE MENU -->
+            {% include 'home/includes/mobile_menu.html' %}
+            <!-- OFFSET INFO (MENU STUFF) -->
+            {% include 'home/includes/offset_menu.html' %}
+            
+            
+            <div id="smooth-wrapper">
+                <div id="smooth-content">
+                    <main>
+                        <!-- INFO CARD -->
+                        {% include 'home/includes/info_card.html' %}
+                        
+                        <!-- TEXT SLIDER -->
+                        {% include 'home/includes/text_slider.html' %}
+                        
+                        <!-- COUNTER (DELETED) -->
+                      
+                        
+                        <!-- RECENT PROJECTS -->
+                        {% include 'home/includes/recent_projects.html' %}
+                        
+                        <!-- PROGRAMMING LANGUAGES I KNOW -->
+                        {% include 'home/includes/programming_languages.html' %}
+                        
+                        <!-- HORIZONTAL TEXT SLIDER -->
+                        {% include 'home/includes/horizontal_text_slider.html' %}
+                        
+                        <!-- TESTIMONIALS -->
+                        {% include 'home/includes/testimonials.html' %}
+                        
+                    </main>
+                    <!-- FOOTER -->
+                    {% include 'home/includes/footer.html' %}
+                    
+                </div>
+            </div>
+        </div>
+        <!-- ==== / page wrapper end ==== -->
+        <!-- ==== scroll to top start ==== -->
+        <button class="progress-wrap" aria-label="scroll indicator" title="go to top">
+            <span></span>
+            <svg
+                class="progress-circle svg-content"
+                width="100%"
+                height="100%"
+                viewBox="-1 -1 102 102"
+            >
+                <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98"/>
+            </svg>
+        </button>
+    </body>
+
+
+{% endblock %}

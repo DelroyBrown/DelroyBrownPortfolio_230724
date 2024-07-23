@@ -1,0 +1,36 @@
+{% load static %}
+<div class="menu">
+    <button aria-label="close off canvas" class="off-canvas-close">
+        <i class="fa-solid fa-xmark"></i>
+    </button>
+    <div class="menu-inner">
+        <div class="gallery">
+            <div class="title menu-nav-link">
+                <h2 class="title-xl text-uppercase fw-7">Our Featured Projects</h2>
+            </div>
+            <div class="images">
+                <a class="image-link" href="case-study-single.html">
+                    <div class="image" data-label="Development">
+                        <img src="{% static 'images/project_images/one.png' %}" alt="Image">
+                    </div>
+                </a>
+                <a class="image-link" href="case-study-single.html">
+                    <div class="image" data-label="Design">
+                        <img src="{% static 'images/project_images/two.png' %}" alt="Image">
+                    </div>
+                </a>
+                <a class="image-link" href="case-study-single.html">
+                    <div class="image" data-label="Marketting">
+                        <img src="{% static 'images/project_images/three.png' %}" alt="Image">
+                    </div>
+                </a>
+                <a class="image-link" href="case-study-single.html">
+                    <div class="image" data-label="Launch">
+                        <img
+                        src="{% static 'images/project_images/four.png' %}" alt="Image">
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
