@@ -2,5 +2,620 @@
 
 
 {% block content %}
-<h1>About Me</h1>
+
+<div id="preloader">
+    <div id="loader"></div>
+</div>
+<!-- ==== / preloader end ==== -->
+<!-- ==== mouse cursor drag start ==== -->
+<div class="mouseCursor cursor-outer"></div>
+<div class="mouseCursor cursor-inner">
+    <span>Drag</span>
+</div>
+<!-- ==== / mouse cursor drag end ==== -->
+<!-- ==== page wrapper start ==== -->
+<div class="my-app">
+    <!-- HEADER -->
+    {% include 'common_includes/header_2.html' %}
+    <!-- MOBILE MENU -->
+    {% include 'home/includes/mobile_menu.html' %}
+    <!-- OFFSET INFO -->
+    {% include 'home/includes/offset_menu.html' %}
+    <div id="smooth-wrapper">
+        <div id="smooth-content">
+            <main>
+                <!-- ==== banner start ==== -->
+                <section class="pb-120 cmn-banner">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="cmn-banner__content">
+                                    <h2 class="title-xl fw-7 title-anim">About Me</h2>
+                                    <nav aria-label="breadcrumb">
+                                        <ol class="breadcrumb justify-content-center">
+                                            <li class="breadcrumb-item">
+                                                <a href="index.html">Home</a>
+                                            </li>
+                                            <li class="breadcrumb-item active" aria-current="page">
+                                                About
+                                            </li>
+                                        </ol>
+                                    </nav>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- ==== / banner end ==== -->
+                <!-- ==== about me start ==== -->
+                <section class="about-me fade-wrapper">
+                    <div class="container">
+                        <div class="row gaper">
+                            <div class="col-12 col-xxl-6">
+                                <div class="banner-two__content fade-top">
+                                    <div class="banner-two__group">
+                                        <div class="banner-two__left">
+                                            <h2 class="title-xl title-anim">
+                                                I Bring Your Website With Vision To Life
+                                            </h2>
+                                        </div>
+                                    </div>
+                                    <hr>
+                                    <div class="banner-content__paragraph">
+                                        <p class="text-septenary">I'm a web developer from Southampton, UK. Currently
+                                            lead developer at a local agency, Fhoke. In my spare time I enjoy DIY,
+                                            gaming and building my own projects. My preferred tools are PHP, Laravel and
+                                            Vue.js. I recently converted my Inertia app from Laravel Mix to using Vite.
+                                        </p>
+                                    </div>
+                                    <hr>
+                                    <div class="banner-content__footer">
+                                        <ul>
+                                            <li>
+                                                <a href="https://goo.gl/maps/ktoFZVxqpYmtJNiR8" target="_blank">
+                                                    <i class="fa-solid fa-location-dot"></i>
+                                                    Lives in New York, USA
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="mailto:info.andrea@mail.com">
+                                                    <i class="fa-regular fa-envelope"></i>
+                                                    info.andrea@mail.com
+                                                </a>
+                                            </li>
+                                        </ul>
+                                        <button id="downloadCv">
+                                            Download Resume
+                                            <i class="fa-solid fa-download"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-lg-6 col-xxl-3">
+                                <div class="banner__meta fade-top">
+                                    <div class="banner__meta-single bg-grd-one">
+                                        <div class="thumb">
+                                            <img src="assets/images/banner/bn-one-thumb.png" alt="Image">
+                                        </div>
+                                        <div class="content">
+                                            <h4 class="title-md ">
+                                                Hi I'm Andrea,
+                                                <br>
+                                                <span id="textTyped" class="text-quaternary text-capitalize"></span>
+                                            </h4>
+                                        </div>
+                                        <div class="dert">
+                                            <p class="text-quaternary text-md">Follow Me</p>
+                                            <div class="social justify-content-start">
+                                                <a href="https://www.twitter.com/" target="_blank">
+                                                    <i class="fa-brands fa-twitter"></i>
+                                                </a>
+                                                <a href="https://www.instagram.com/" target="_blank">
+                                                    <i class="fa-brands fa-instagram"></i>
+                                                </a>
+                                                <a href="https://www.facebook.com/" target="_blank">
+                                                    <i class="fa-brands fa-facebook-messenger"></i>
+                                                </a>
+                                                <a href="https://www.youtube.com/" target="_blank">
+                                                    <i class="fa-brands fa-youtube"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-lg-6 col-xxl-3">
+                                <div class="banner-two__sidebar fade-top">
+                                    <h4 class="title-md fw-7">My Special Skills</h4>
+                                    <div class="skill-wrap">
+                                        <div class="skill-bar-single">
+                                            <div class="skill-bar-title">
+                                                <p>Team Leadership</p>
+                                                <span class="percent-value"></span>
+                                            </div>
+                                            <div class="skill-bar-wrapper" data-percent="100%">
+                                                <div class="skill-bar">
+                                                    <div class="skill-bar-percent"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="skill-bar-single">
+                                            <div class="skill-bar-title">
+                                                <p>Programming Languages</p>
+                                                <span class="percent-value"></span>
+                                            </div>
+                                            <div class="skill-bar-wrapper" data-percent="90%">
+                                                <div class="skill-bar">
+                                                    <div class="skill-bar-percent"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="skill-bar-single">
+                                            <div class="skill-bar-title">
+                                                <p>Program Frameworks</p>
+                                                <span class="percent-value"></span>
+                                            </div>
+                                            <div class="skill-bar-wrapper" data-percent="70%">
+                                                <div class="skill-bar">
+                                                    <div class="skill-bar-percent"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="skill-bar-single">
+                                            <div class="skill-bar-title">
+                                                <p>Problem Solving</p>
+                                                <span class="percent-value"></span>
+                                            </div>
+                                            <div class="skill-bar-wrapper" data-percent="80%">
+                                                <div class="skill-bar">
+                                                    <div class="skill-bar-percent"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="skill-bar-single">
+                                            <div class="skill-bar-title">
+                                                <p>Communication Skills</p>
+                                                <span class="percent-value"></span>
+                                            </div>
+                                            <div class="skill-bar-wrapper" data-percent="85%">
+                                                <div class="skill-bar">
+                                                    <div class="skill-bar-percent"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- ==== / about me end ==== -->
+                <!-- ==== experience start ==== -->
+                <section class="pt-120 experience fade-wrapper">
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-12">
+                                <div class="section__header text-center">
+                                    <h2 class="title-xl title-anim">Education And Experience</h2>
+                                    <p class="text-septenary text-center">Your website is an extension of your brand,
+                                        and I'm here to help you make it the</p>
+                                    <div class="faq-two__switch">
+                                        <p class="abc cd">Experiences</p>
+                                        <div class="switcher">
+                                            <input type="checkbox" id="switch">
+                                            <label for="switch">Toggle</label>
+                                        </div>
+                                        <p class="atc">Education</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="faq-tab-content" id="faqOne">
+                                    <div class="row gaper">
+                                        <div class="col-12 col-lg-6">
+                                            <div class="experience__single fade-top">
+                                                <span>2020 - 2021</span>
+                                                <h4 class="title-sm text-capitalize">full stack web Developer</h4>
+                                                <p class="text-capitalize text-quaternary">Brunodee digital Agency</p>
+                                                <p class="text-septenary">I'm a web developer from Southampton, UK.
+                                                    Currently lead developer at a local agency, Fhoke. In my spare time
+                                                    I enjoy DIY, gaming and building my own projects. My preferred tools
+                                                    are PHP, Laravel and Vue.js.</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-lg-6">
+                                            <div class="experience__single fade-top">
+                                                <span>2020 - 2021</span>
+                                                <h4 class="title-sm text-capitalize">senior UX/UI Designer</h4>
+                                                <p class="text-capitalize text-quaternary">Brain craft apps ltd</p>
+                                                <p class="text-septenary">I'm a web developer from Southampton, UK.
+                                                    Currently lead developer at a local agency, Fhoke. In my spare time
+                                                    I enjoy DIY, gaming and building my own projects. My preferred tools
+                                                    are PHP, Laravel and Vue.js.</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-lg-6">
+                                            <div class="experience__single fade-top">
+                                                <span>2020 - 2021</span>
+                                                <h4 class="title-sm text-capitalize">Software engineer</h4>
+                                                <p class="text-capitalize text-quaternary">creative cloud digital Agency
+                                                </p>
+                                                <p class="text-septenary">I'm a web developer from Southampton, UK.
+                                                    Currently lead developer at a local agency, Fhoke. In my spare time
+                                                    I enjoy DIY, gaming and building my own projects. My preferred tools
+                                                    are PHP, Laravel and Vue.js.</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-lg-6">
+                                            <div class="experience__single fade-top">
+                                                <span>2020 - 2021</span>
+                                                <h4 class="title-sm text-capitalize">Product Designer</h4>
+                                                <p class="text-capitalize text-quaternary">Creationic Inc.</p>
+                                                <p class="text-septenary">I'm a web developer from Southampton, UK.
+                                                    Currently lead developer at a local agency, Fhoke. In my spare time
+                                                    I enjoy DIY, gaming and building my own projects. My preferred tools
+                                                    are PHP, Laravel and Vue.js.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="faq-tab-content" id="faqTwo">
+                                    <div class="row gaper">
+                                        <div class="col-12 col-lg-6">
+                                            <div class="experience__single fade-top">
+                                                <span>2020 - 2021</span>
+                                                <h4 class="title-sm text-capitalize">full stack web Developer</h4>
+                                                <p class="text-capitalize text-quaternary">Brunodee digital Agency</p>
+                                                <p class="text-septenary">I'm a web developer from Southampton, UK.
+                                                    Currently lead developer at a local agency, Fhoke. In my spare time
+                                                    I enjoy DIY, gaming and building my own projects. My preferred tools
+                                                    are PHP, Laravel and Vue.js.</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-lg-6">
+                                            <div class="experience__single fade-top">
+                                                <span>2020 - 2021</span>
+                                                <h4 class="title-sm text-capitalize">senior UX/UI Designer</h4>
+                                                <p class="text-capitalize text-quaternary">Brain craft apps ltd</p>
+                                                <p class="text-septenary">I'm a web developer from Southampton, UK.
+                                                    Currently lead developer at a local agency, Fhoke. In my spare time
+                                                    I enjoy DIY, gaming and building my own projects. My preferred tools
+                                                    are PHP, Laravel and Vue.js.</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-lg-6">
+                                            <div class="experience__single fade-top">
+                                                <span>2020 - 2021</span>
+                                                <h4 class="title-sm text-capitalize">Software engineer</h4>
+                                                <p class="text-capitalize text-quaternary">creative cloud digital Agency
+                                                </p>
+                                                <p class="text-septenary">I'm a web developer from Southampton, UK.
+                                                    Currently lead developer at a local agency, Fhoke. In my spare time
+                                                    I enjoy DIY, gaming and building my own projects. My preferred tools
+                                                    are PHP, Laravel and Vue.js.</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-lg-6">
+                                            <div class="experience__single fade-top">
+                                                <span>2020 - 2021</span>
+                                                <h4 class="title-sm text-capitalize">Product Designer</h4>
+                                                <p class="text-capitalize text-quaternary">Creationic Inc.</p>
+                                                <p class="text-septenary">I'm a web developer from Southampton, UK.
+                                                    Currently lead developer at a local agency, Fhoke. In my spare time
+                                                    I enjoy DIY, gaming and building my own projects. My preferred tools
+                                                    are PHP, Laravel and Vue.js.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- ==== / experience end ==== -->
+                <!-- ==== awards section start ==== -->
+                <section class="awards pt-120">
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-12">
+                                <div class="section__header--secondary">
+                                    <div class="row align-items-center gaper">
+                                        <div class="col-12 col-lg-6">
+                                            <div class="section__header mb-0 text-center text-lg-start">
+                                                <h2 class="title-xl title-anim">Awards Achievement</h2>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-lg-6">
+                                            <div class="slide-dots awards-dots"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="awards__slider">
+                                    <div class="awards__slider-single">
+                                        <div class="bn-about-thumb">
+                                            <img src="assets/images/aw-one.png" alt="Image">
+                                            <a href="https://www.youtube.com/" class="yt" target="_blank">
+                                                <i class="fa-brands fa-youtube"></i>
+                                            </a>
+                                        </div>
+                                        <div class="bn-about__content">
+                                            <div class="bn-about__content-left">
+                                                <h3 class="title-lg">Awwwards.</h3>
+                                            </div>
+                                            <div class="bn-about__content-right">
+                                                <ul>
+                                                    <li>site of the day portfolio (2020)</li>
+                                                    <li>best website content (2021)</li>
+                                                    <li>up labs contest winning (2022)</li>
+                                                    <li>site of the day portfolio (2020)</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="awards__slider-single">
+                                        <div class="bn-about-thumb">
+                                            <img src="assets/images/aw-two.png" alt="Image">
+                                            <a href="https://www.youtube.com/" class="yt" target="_blank">
+                                                <i class="fa-brands fa-youtube"></i>
+                                            </a>
+                                        </div>
+                                        <div class="bn-about__content">
+                                            <div class="bn-about__content-left">
+                                                <h3 class="title-lg">Awwwards.</h3>
+                                            </div>
+                                            <div class="bn-about__content-right">
+                                                <ul>
+                                                    <li>site of the day portfolio (2020)</li>
+                                                    <li>best website content (2021)</li>
+                                                    <li>up labs contest winning (2022)</li>
+                                                    <li>site of the day portfolio (2020)</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="awards__slider-single">
+                                        <div class="bn-about-thumb">
+                                            <img src="assets/images/aw-one.png" alt="Image">
+                                            <a href="https://www.youtube.com/" class="yt" target="_blank">
+                                                <i class="fa-brands fa-youtube"></i>
+                                            </a>
+                                        </div>
+                                        <div class="bn-about__content">
+                                            <div class="bn-about__content-left">
+                                                <h3 class="title-lg">Awwwards.</h3>
+                                            </div>
+                                            <div class="bn-about__content-right">
+                                                <ul>
+                                                    <li>site of the day portfolio (2020)</li>
+                                                    <li>best website content (2021)</li>
+                                                    <li>up labs contest winning (2022)</li>
+                                                    <li>site of the day portfolio (2020)</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="awards__slider-single">
+                                        <div class="bn-about-thumb">
+                                            <img src="assets/images/aw-two.png" alt="Image">
+                                            <a href="https://www.youtube.com/" class="yt" target="_blank">
+                                                <i class="fa-brands fa-youtube"></i>
+                                            </a>
+                                        </div>
+                                        <div class="bn-about__content">
+                                            <div class="bn-about__content-left">
+                                                <h3 class="title-lg">Awwwards.</h3>
+                                            </div>
+                                            <div class="bn-about__content-right">
+                                                <ul>
+                                                    <li>site of the day portfolio (2020)</li>
+                                                    <li>best website content (2021)</li>
+                                                    <li>up labs contest winning (2022)</li>
+                                                    <li>site of the day portfolio (2020)</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- ==== / awards section end ==== -->
+                <!-- ==== feedback section start ==== -->
+                <section class="pt-120 h-s-f fade-wrapper">
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-12 col-xl-6">
+                                <div class="section__header text-center fade-top">
+                                    <h2 class="title-xxl reveal-title">
+                                        Client's
+                                        <span class="fw-7">Feedback</span>
+                                    </h2>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="h-s-f-inner">
+                                    <div class="h-s-f-single fade-top">
+                                        <h4>Rate Me</h4>
+                                        <img src="assets/images/testimonial/quote.png" alt="Image">
+                                        <div class="d-flex gr">
+                                            <div class="review__icons">
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                            </div>
+                                            <h4>
+                                                4.7
+                                                <span>/ 5</span>
+                                            </h4>
+                                        </div>
+                                    </div>
+                                    <div class="h-s-f-single fade-top">
+                                        <p class="text-md fw-7">Need Single page site design</p>
+                                        <blockquote>
+                                            <q>He is a good designer with UI/UX experience. He has compiled my landing
+                                                page in a good looking way.</q>
+                                        </blockquote>
+                                        <div class="rti">
+                                            <div class="review__icons">
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                            </div>
+                                            <p>
+                                                <span>luwise</span>
+                                                london, UK
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="h-s-f-single brt fade-top">
+                                        <p class="text-md fw-7">Need Single page site design</p>
+                                        <blockquote>
+                                            <q>He is a good designer with UI/UX experience. He has compiled my landing
+                                                page.</q>
+                                        </blockquote>
+                                        <div class="rti">
+                                            <div class="review__icons">
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                            </div>
+                                            <p>
+                                                <span>luwise</span>
+                                                london, UK
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="h-s-f-single brt fade-top">
+                                        <p class="text-md fw-7">Need Single page site design</p>
+                                        <blockquote>
+                                            <q>He is a good designer with UI/UX experience. He has compiled my landing
+                                                page.</q>
+                                        </blockquote>
+                                        <div class="rti">
+                                            <div class="review__icons">
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                            </div>
+                                            <p>
+                                                <span>luwise</span>
+                                                london, UK
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="h-s-f-single fade-top">
+                                        <p class="text-md fw-7">Need Single page site design</p>
+                                        <blockquote>
+                                            <q>He is a good designer with UI/UX experience. He has compiled my landing
+                                                page in a good looking way.</q>
+                                        </blockquote>
+                                        <div class="rti">
+                                            <div class="review__icons">
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                            </div>
+                                            <p>
+                                                <span>luwise</span>
+                                                london, UK
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- ==== / feedback section end ==== -->
+            </main>
+            <!-- ==== footer start ==== -->
+            <footer class="footer pt-120">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12">
+                            <div
+                                class="footer__intro footer__intro-alt d-flex align-items-center justify-content-center flex-column flex-sm-row justify-content-sm-between flex-wrap">
+                                <h2 class="title-xl text-quaternary fw-4 title-anim">Let's Work Together</h2>
+                                <h5 class="title-sm">SEND ME A MESSAGE</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row justify-content-center">
+                        <div class="col-12">
+                            <div class="footer__content text-center pt-120 pb-120">
+                                <h2 class="light-title-xl text-uppercase fw-5">
+                                    <a href="mailto:hello@exgridinfo.com" class="animated-text">hello@exgridinfo.com</a>
+                                </h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer__copyright" data-background="assets/images/footer-bg.png">
+                    <div class="container">
+                        <div class="row align-items-center gaper">
+                            <div class="col-12 col-lg-8">
+                                <div class="footer__copyright-text text-center text-lg-start">
+                                    <p class="text-senary tertiary-text">
+                                        &copy;
+                                        <span id="copyYear"></span>
+                                        . All Rights Reserved
+                                        <a href="index.html" class="fw-6">Exgrid</a>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col-12 col-lg-4">
+                                <div class="social justify-content-center justify-content-lg-end">
+                                    <a href="https://www.twitter.com/" target="_blank">
+                                        <i class="fa-brands fa-twitter"></i>
+                                    </a>
+                                    <a href="https://www.instagram.com/" target="_blank">
+                                        <i class="fa-brands fa-instagram"></i>
+                                    </a>
+                                    <a href="https://www.facebook.com/" target="_blank">
+                                        <i class="fa-brands fa-facebook-messenger"></i>
+                                    </a>
+                                    <a href="https://www.youtube.com/" target="_blank">
+                                        <i class="fa-brands fa-youtube"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+            <!-- ==== / footer end ==== -->
+        </div>
+    </div>
+</div>
+<!-- ==== / page wrapper end ==== -->
+<!-- ==== scroll to top start ==== -->
+<button class="progress-wrap" aria-label="scroll indicator" title="go to top">
+    <span></span>
+    <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+        <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
+    </svg>
+</button>
+<!-- ==== / scroll to top end ==== -->
+<!-- ==== js dependencies ==== -->
+<!-- jquery -->
+
 {% endblock %}

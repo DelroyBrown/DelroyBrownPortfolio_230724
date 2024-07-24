@@ -1,0 +1,86 @@
+{% load static %}
+<header class="header secondary-header">
+    <div class="primary-navbar">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <nav class="navbar p-0">
+                        <div class="navbar__profile d-none d-xl-block">
+                            <a href="index.html" aria-label="home page" title="logo">
+                                <img src="{% static 'images/avatar.png' %}" alt="Images">
+                            </a>
+                        </div>
+                        <div class="navbar__logo d-block d-xl-none">
+                            <a
+                                href="index.html"
+                                aria-label="home page"
+                                title="logo"
+                                class="logo"
+                            >
+                                <img src="{% static 'images/logo.png' %}" alt="Images">
+                            </a>
+                        </div>
+                        <div class="navbar__menu">
+                           
+                            <ul class="navbar__list">
+                            
+                                <li class="navbar__item nav-fade">
+                                    <a
+                                    href="/">Home</a>
+                                </li>
+                                <li class="navbar__item nav-fade">
+                                    <a
+                                    href="{% url 'DelroyBrownPortfolio_about:about-me' %}">About Me</a>
+                                </li>
+                                <li class="navbar__item navbar__item--has-children nav-fade">
+                                    <button aria-label="dropdown menu" class="navbar__dropdown-label">Services</button>
+                                    <ul class="navbar__sub-menu">
+                                        <li>
+                                            <a href="services.html">Services</a>
+                                        </li>
+                                        <li>
+                                            <a href="service-single.html">Service Details</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="navbar__item navbar__item--has-children nav-fade">
+                                    <button aria-label="dropdown menu" class="navbar__dropdown-label">Case Study</button>
+                                    <ul class="navbar__sub-menu">
+                                        <li>
+                                            <a href="case-study.html">Case Study</a>
+                                        </li>
+                                        <li>
+                                            <a href="case-study-single.html">Case Study Details</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="navbar__item navbar__item--has-children nav-fade">
+                                    <button aria-label="dropdown menu" class="navbar__dropdown-label">Blog</button>
+                                    <ul class="navbar__sub-menu">
+                                        <li>
+                                            <a href="blog.html">Blog</a>
+                                        </li>
+                                        <li>
+                                            <a href="blog-single.html">Blog Details</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="navbar__item nav-fade">
+                                    <a href="{% url 'DelroyBrownPortfolio_contact:contact' %}">Contact</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="navbar__options">
+                            <button class="open-mobile-info animated-bar d-none d-xl-flex" aria-label="toggle offset info" title="open offset info">
+                                <span class="bar-line"></span>
+                            </button>
+                            <button class="open-mobile-menu animated-bar d-flex d-xl-none" aria-label="toggle mobile menu" title="open mobile menu">
+                                <span class="bar-line"></span>
+                            </button>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
