@@ -421,7 +421,7 @@
          * ======================================
          */
         $("#downloadCv").on("click", function () {
-            var pdfURL = "assets/images/sample-page.pdf";
+            var pdfURL = "static/images/DelroyBrownCV.pdf";
 
             var downloadLink = document.createElement("a");
             downloadLink.href = pdfURL;
@@ -630,7 +630,7 @@
             slidesToScroll: 1,
             autoplay: true,
             autoplaySpeed: 0,
-            speed: 7000,
+            speed: 3000,
             arrows: false,
             dots: false,
             pauseOnHover: false,
