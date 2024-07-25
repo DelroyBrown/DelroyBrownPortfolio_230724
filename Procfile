@@ -1,0 +1,1 @@
+web: gunicorn DelroyBrownPortfolio_base.wsgi:application
