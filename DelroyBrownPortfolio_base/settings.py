@@ -9,9 +9,9 @@ load_dotenv()
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 
-SECRET_KEY = os.getenv("SECRET_KEY")
+SECRET_KEY = os.environ.get("SECRET_KEY", "")
 
-DEBUG = os.getenv("DEBUG")
+DEBUG = 'DEVELOPMENT' in os.environ
 
 ALLOWED_HOSTS = ["delroy-brown-portfolio-4615d064d1ba.herokuapp.com", "localhost"]
 
