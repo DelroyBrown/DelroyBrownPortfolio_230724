@@ -2,6 +2,7 @@
 import os
 from dotenv import load_dotenv
 from pathlib import Path
+import dj_database_url
 
 load_dotenv()
 
@@ -64,6 +65,8 @@ DATABASES = {
         "NAME": BASE_DIR / "db.sqlite3",
     }
 }
+
+
 
 
 AUTH_PASSWORD_VALIDATORS = [
