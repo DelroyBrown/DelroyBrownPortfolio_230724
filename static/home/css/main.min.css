@@ -5494,7 +5494,7 @@ span{
     border:1px solid #414141;
     color:var(--white);
     border-radius:100px;
-    padding:20px 60px
+    padding:20px 60px;
 }
 .contact-m .contact-main__form .form-cta .btn:hover{
     border:1px solid #fff;
