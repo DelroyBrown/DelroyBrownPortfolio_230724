@@ -421,7 +421,7 @@
          * ======================================
          */
         $("#downloadCv").on("click", function () {
-            var pdfURL = "static/images/DelroyBrownCV.pdf";
+            var pdfURL = "https://delroy-brown-portfolio.s3.eu-west-2.amazonaws.com/static/images/DelroyBrownCV.pdf";
 
             var downloadLink = document.createElement("a");
             downloadLink.href = pdfURL;
