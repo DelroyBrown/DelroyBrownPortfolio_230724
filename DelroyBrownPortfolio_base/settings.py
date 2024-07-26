@@ -11,9 +11,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 SECRET_KEY = os.environ.get("SECRET_KEY", "")
 
-DEBUG = "DEVELOPMENT" in os.environ
+DEBUG = "DEVELOPMENT" in os.environ or True
 
-ALLOWED_HOSTS = ["delroy-brown-portfolio-4615d064d1ba.herokuapp.com", "localhost"]
+ALLOWED_HOSTS = ["delroy-brown-portfolio-4615d064d1ba.herokuapp.com", "127.0.0.1"]
 
 
 INSTALLED_APPS = [

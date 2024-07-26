@@ -2,6 +2,7 @@
 from django.shortcuts import render, redirect
 from django.core.mail import EmailMultiAlternatives
 from django.conf import settings
+from django.contrib import messages
 from .forms import ContactForm
 from django.template.loader import render_to_string
 
