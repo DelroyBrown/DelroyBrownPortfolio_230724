@@ -3,24 +3,533 @@
 {% load static %}
 
 {% block content %}
-<div class="container">
-    <h2>{{ project.project_name }}</h2>
-    <div class="row">
-        <div class="col-md-6">
-            <img src="{{ project.image_main.url }}" class="img-fluid" alt="{{ project.project_name }}">
-        </div>
-        <div class="col-md-6">
-            <p>{{ project.project_description }}</p>
-            <!-- Additional Images -->
-            {% if project.image_1 %}
-            <img src="{{ project.image_1.url }}" class="img-fluid" alt="{{ project.project_name }}">
-            {% endif %}
-            {% if project.image_2 %}
-            <img src="{{ project.image_2.url }}" class="img-fluid" alt="{{ project.project_name }}">
-            {% endif %}
-            {% if project.image_3 %}
-            <img src="{{ project.image_3.url }}" class="img-fluid" alt="{{ project.project_name }}">
-            {% endif %}
+<div class="my-app">
+    <!-- HEADER -->
+    {% include 'common_includes/header_2.html' %}
+    <!-- MOBILE MENU -->
+    {% include 'home/includes/mobile_menu.html' %}
+    <!-- OFFSET INFO (MENU STUFF) -->
+    {% include 'home/includes/offset_menu.html' %}
+    <div id="smooth-wrapper" style="inset: 0px; width: 100%; height: 100%; position: fixed; overflow: hidden;">
+        <div id="smooth-content"
+            style="translate: none; rotate: none; scale: none; transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); box-sizing: border-box; width: 100%; overflow: visible;">
+            <main>
+                <!-- ==== banner start ==== -->
+                <section class="pb-120 cmn-banner">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-12">
+                                <h1 class="text-center">{{ project.project_name }}</h1>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- ==== / banner end ==== -->
+                <!-- ==== project details start ==== -->
+                <section class="section project-d">
+                    <div class="container">
+                        <div class="row gaper">
+                            <div class="col-12 col-lg-6">
+                                <div class="project-d-group">
+                                    <h3>About The Project</h3>
+                                    <p>
+                                        There are many variations of passages of Lorem Ipsum available, but the majority
+                                        have suffered alteration in some form, by injected humour, or randomised words
+                                        which don't look even slightly believable. If you are going to use a passage of
+                                        Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the
+                                        middle of text. All the Lorem Ipsum generators on the Internet tend to
+                                        repeat predefined chunks as necessary.All the Lorem Ipsum generators on the
+                                        Internet tend to
+                                        repeat predefined chunks as necessary, repeat predefined chunks as necessary.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col-12 col-lg-6">
+                                <div class="project-d-group">
+                                    <h3>What's Used:</h3>
+                                    <p>It is a long established fact that a reader will be distracted by the readable
+                                        content of a page when looking at its layout. The point of using Lorem Ipsum.
+                                    </p>
+                                    <ul>
+                                        <li>
+                                            Geographical diversity, project complexity
+                                        </li>
+                                        <li>Whether building on land or over water</li>
+                                        <li>Construction companies respond to the unique needs</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="poster__slider-wrapper">
+                                    <div class="poster__slider slick-initialized slick-slider">
+                                        <div class="slick-list draggable" style="padding: 0px;">
+                                            <div class="slick-track"
+                                                style="opacity: 1; width: 14400px; transform: translate3d(-5760px, 0px, 0px); transition: transform 1000ms;">
+                                                <div class="poster__slider-single slick-slide slick-cloned"
+                                                    data-slick-index="-2" id="" aria-hidden="true" tabindex="-1"
+                                                    style="width: 1416px;">
+                                                    <img src="{{ project.image_main.url }}" alt="Image">
+                                                </div>
+                                                <div class="poster__slider-single slick-slide slick-cloned"
+                                                    data-slick-index="-1" id="" aria-hidden="true" tabindex="-1"
+                                                    style="width: 1416px;">
+                                                    <img src="assets/images/projects/poster.png" alt="Image">
+                                                </div>
+                                                <div class="poster__slider-single slick-slide" data-slick-index="0"
+                                                    aria-hidden="true" tabindex="-1" style="width: 1416px;">
+                                                    <img src="assets/images/projects/poster.png" alt="Image">
+                                                </div>
+                                                <div class="poster__slider-single slick-slide" data-slick-index="1"
+                                                    aria-hidden="true" tabindex="0" style="width: 1416px;">
+                                                    <img src="assets/images/projects/poster.png" alt="Image">
+                                                </div>
+                                                <div class="poster__slider-single slick-slide slick-current slick-active slick-center"
+                                                    data-slick-index="2" aria-hidden="false" tabindex="-1"
+                                                    style="width: 1416px;">
+                                                    <img src="assets/images/projects/poster.png" alt="Image">
+                                                </div>
+                                                <div class="poster__slider-single slick-slide" data-slick-index="3"
+                                                    aria-hidden="true" tabindex="-1" style="width: 1416px;">
+                                                    <img src="assets/images/projects/poster.png" alt="Image">
+                                                </div>
+                                                <div class="poster__slider-single slick-slide slick-cloned"
+                                                    data-slick-index="4" id="" aria-hidden="true" tabindex="-1"
+                                                    style="width: 1416px;">
+                                                    <img src="assets/images/projects/poster.png" alt="Image">
+                                                </div>
+                                                <div class="poster__slider-single slick-slide slick-cloned"
+                                                    data-slick-index="5" id="" aria-hidden="true" tabindex="-1"
+                                                    style="width: 1416px;">
+                                                    <img src="assets/images/projects/poster.png" alt="Image">
+                                                </div>
+                                                <div class="poster__slider-single slick-slide slick-cloned"
+                                                    data-slick-index="6" id="" aria-hidden="true" tabindex="-1"
+                                                    style="width: 1416px;">
+                                                    <img src="assets/images/projects/poster.png" alt="Image">
+                                                </div>
+                                                <div class="poster__slider-single slick-slide slick-cloned"
+                                                    data-slick-index="7" id="" aria-hidden="true" tabindex="-1"
+                                                    style="width: 1416px;">
+                                                    <img src="assets/images/projects/poster.png" alt="Image">
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+
+                                    </div>
+                                    <div class="slide-group">
+                                        <button aria-label="previous item" class="slide-btn prev-project-d slick-arrow"
+                                            style="">
+                                            <i class="fa-solid fa-angle-left"></i>
+                                        </button>
+                                        <button aria-label="next item" class="slide-btn next-project-d slick-arrow"
+                                            style="">
+                                            <i class="fa-solid fa-angle-right"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row gaper fade-wrapper">
+                            <div class="col-12 col-sm-6 col-xl-4">
+                                <div class="project-d-o__single fade-top"
+                                    style="translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1;">
+                                    <div class="content">
+                                        <h5>Sectors</h5>
+                                        <p>Roads &amp; Highway</p>
+                                    </div>
+                                    <div class="thumb">
+                                        <img src="assets/images/projects/icon-one.png" alt="Image">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-6 col-xl-4">
+                                <div class="project-d-o__single fade-top"
+                                    style="translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1;">
+                                    <div class="content">
+                                        <h5>Owner</h5>
+                                        <p>Some Comapny</p>
+                                    </div>
+                                    <div class="thumb">
+                                        <img src="assets/images/projects/icon-two.png" alt="Image">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-6 col-xl-4">
+                                <div class="project-d-o__single fade-top"
+                                    style="translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1;">
+                                    <div class="content">
+                                        <h5>Project Date</h5>
+                                        <p>Start: 2021 - End: 2023</p>
+                                    </div>
+                                    <div class="thumb">
+                                        <img src="assets/images/projects/icon-three.png" alt="Image">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="details-group text-start section__content-cta">
+                                    <h3>Project Description</h3>
+                                    <p>
+                                        There are many variations of passages of Lorem Ipsum available, but the majority
+                                        have suffered alteration in some form, by injected humour, or randomised words
+                                        which don't look even slightly believable. If you are going to use a passage of
+                                        Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the
+                                        middle of text. All the Lorem Ipsum generators on the Internet tend to repeat
+                                        predefined chunks as necessary
+                                    </p>
+                                    <p>
+                                        There are many variations of passages of Lorem Ipsum available, but the majority
+                                        have suffered alteration in some form, by injected humour, or randomised words
+                                        which don't look even slightly believable. If you are going to use a passage of
+                                        Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the
+                                        middle of text. All the Lorem Ipsum generators on the Internet tend to
+                                        repeat predefined chunks as necessary,
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="quote-pj">
+                                    <div class="cont">
+                                        <div class="quote">
+                                            <i class="fa-solid fa-quote-right"></i>
+                                        </div>
+                                        <blockquote class="text-xl fw-7">
+                                            And the day came when the risk to remain tight in a bud
+                                            was more painful than the risk it took to blossom.
+                                        </blockquote>
+                                    </div>
+                                    <div class="author">
+                                        <h4>- BILLI REUSS</h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="details-group text-start section__content-cta">
+                                    <h3>The Result</h3>
+                                    <p>
+                                        There are many variations of passages of Lorem Ipsum available, but the majority
+                                        have suffered alteration in some form, by injected humour, or randomised words
+                                        which don't look even slightly believable. If you are going to use a passage of
+                                        Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the
+                                        middle of text. All the Lorem Ipsum generators on the Internet tend to repeat
+                                        predefined chunks as necessary
+                                    </p>
+                                    <p>
+                                        There are many variations of passages of Lorem Ipsum available, but the majority
+                                        have suffered alteration in some form, by injected humour, or randomised words
+                                        which don't look even slightly believable. If you are going to use a passage of
+                                        Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the
+                                        middle of text. All the Lorem Ipsum generators on the Internet tend to
+                                        repeat predefined chunks as necessary,
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-d__slider section__content-cta slick-initialized slick-slider">
+
+
+
+
+
+
+
+
+
+
+                        <div class="slick-list draggable" style="padding: 0px 15%;">
+                            <div class="slick-track"
+                                style="opacity: 1; width: 10944px; transform: translate3d(-5016px, 0px, 0px); transition: transform 1000ms;">
+                                <div class="project-d__slider-single slick-slide slick-cloned" tabindex="-1"
+                                    style="width: 432px;" data-slick-index="-4" id="" aria-hidden="true">
+                                    <img src="assets/images/projects/d-two.png" alt="Image">
+                                </div>
+                                <div class="project-d__slider-single slick-slide slick-cloned" tabindex="-1"
+                                    style="width: 432px;" data-slick-index="-3" id="" aria-hidden="true">
+                                    <img src="assets/images/projects/d-three.png" alt="Image">
+                                </div>
+                                <div class="project-d__slider-single slick-slide slick-cloned" tabindex="-1"
+                                    style="width: 432px;" data-slick-index="-2" id="" aria-hidden="true">
+                                    <img src="assets/images/projects/d-four.png" alt="Image">
+                                </div>
+                                <div class="project-d__slider-single slick-slide slick-cloned" tabindex="-1"
+                                    style="width: 432px;" data-slick-index="-1" id="" aria-hidden="true">
+                                    <img src="assets/images/projects/d-five.png" alt="Image">
+                                </div>
+                                <div class="project-d__slider-single slick-slide" tabindex="-1" style="width: 432px;"
+                                    data-slick-index="0" aria-hidden="true">
+                                    <img src="assets/images/projects/d-one.png" alt="Image">
+                                </div>
+                                <div class="project-d__slider-single slick-slide" tabindex="-1" style="width: 432px;"
+                                    data-slick-index="1" aria-hidden="true">
+                                    <img src="assets/images/projects/d-two.png" alt="Image">
+                                </div>
+                                <div class="project-d__slider-single slick-slide" tabindex="-1" style="width: 432px;"
+                                    data-slick-index="2" aria-hidden="true">
+                                    <img src="assets/images/projects/d-three.png" alt="Image">
+                                </div>
+                                <div class="project-d__slider-single slick-slide" tabindex="-1" style="width: 432px;"
+                                    data-slick-index="3" aria-hidden="true">
+                                    <img src="assets/images/projects/d-four.png" alt="Image">
+                                </div>
+                                <div class="project-d__slider-single slick-slide" tabindex="-1" style="width: 432px;"
+                                    data-slick-index="4" aria-hidden="true">
+                                    <img src="assets/images/projects/d-five.png" alt="Image">
+                                </div>
+                                <div class="project-d__slider-single slick-slide" tabindex="-1" style="width: 432px;"
+                                    data-slick-index="5" aria-hidden="true">
+                                    <img src="assets/images/projects/d-one.png" alt="Image">
+                                </div>
+                                <div class="project-d__slider-single slick-slide" tabindex="-1" style="width: 432px;"
+                                    data-slick-index="6" aria-hidden="true">
+                                    <img src="assets/images/projects/d-two.png" alt="Image">
+                                </div>
+                                <div class="project-d__slider-single slick-slide slick-active" tabindex="0"
+                                    style="width: 432px;" data-slick-index="7" aria-hidden="false">
+                                    <img src="assets/images/projects/d-three.png" alt="Image">
+                                </div>
+                                <div class="project-d__slider-single slick-slide slick-current slick-active slick-center"
+                                    tabindex="0" style="width: 432px;" data-slick-index="8" aria-hidden="false">
+                                    <img src="assets/images/projects/d-four.png" alt="Image">
+                                </div>
+                                <div class="project-d__slider-single slick-slide slick-active" tabindex="0"
+                                    style="width: 432px;" data-slick-index="9" aria-hidden="false">
+                                    <img src="assets/images/projects/d-five.png" alt="Image">
+                                </div>
+                                <div class="project-d__slider-single slick-slide slick-cloned" tabindex="-1"
+                                    style="width: 432px;" data-slick-index="10" id="" aria-hidden="true">
+                                    <img src="assets/images/projects/d-one.png" alt="Image">
+                                </div>
+                                <div class="project-d__slider-single slick-slide slick-cloned" tabindex="-1"
+                                    style="width: 432px;" data-slick-index="11" id="" aria-hidden="true">
+                                    <img src="assets/images/projects/d-two.png" alt="Image">
+                                </div>
+                                <div class="project-d__slider-single slick-slide slick-cloned" tabindex="-1"
+                                    style="width: 432px;" data-slick-index="12" id="" aria-hidden="true">
+                                    <img src="assets/images/projects/d-three.png" alt="Image">
+                                </div>
+                                <div class="project-d__slider-single slick-slide slick-cloned" tabindex="-1"
+                                    style="width: 432px;" data-slick-index="13" id="" aria-hidden="true">
+                                    <img src="assets/images/projects/d-four.png" alt="Image">
+                                </div>
+                                <div class="project-d__slider-single slick-slide slick-cloned" tabindex="-1"
+                                    style="width: 432px;" data-slick-index="14" id="" aria-hidden="true">
+                                    <img src="assets/images/projects/d-five.png" alt="Image">
+                                </div>
+                                <div class="project-d__slider-single slick-slide slick-cloned" tabindex="-1"
+                                    style="width: 432px;" data-slick-index="15" id="" aria-hidden="true">
+                                    <img src="assets/images/projects/d-one.png" alt="Image">
+                                </div>
+                                <div class="project-d__slider-single slick-slide slick-cloned" tabindex="-1"
+                                    style="width: 432px;" data-slick-index="16" id="" aria-hidden="true">
+                                    <img src="assets/images/projects/d-two.png" alt="Image">
+                                </div>
+                                <div class="project-d__slider-single slick-slide slick-cloned" tabindex="-1"
+                                    style="width: 432px;" data-slick-index="17" id="" aria-hidden="true">
+                                    <img src="assets/images/projects/d-three.png" alt="Image">
+                                </div>
+                                <div class="project-d__slider-single slick-slide slick-cloned" tabindex="-1"
+                                    style="width: 432px;" data-slick-index="18" id="" aria-hidden="true">
+                                    <img src="assets/images/projects/d-four.png" alt="Image">
+                                </div>
+                                <div class="project-d__slider-single slick-slide slick-cloned" tabindex="-1"
+                                    style="width: 432px;" data-slick-index="19" id="" aria-hidden="true">
+                                    <img src="assets/images/projects/d-five.png" alt="Image">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- ==== / project details end ==== -->
+            </main>
+            <!-- ==== footer start ==== -->
+            <footer class="footer pt-120">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12">
+                            <div
+                                class="footer__intro d-flex align-items-center justify-content-center flex-column flex-sm-row justify-content-sm-between flex-wrap">
+                                <h2 class="title-xl text-quaternary fw-4 title-anim">
+                                    <div style="position:relative;display:inline-block;">
+                                        <div
+                                            style="position: relative; display: inline-block; translate: none; rotate: none; scale: none; opacity: 1; visibility: inherit; transform: translate(0px, 0px);">
+                                            L</div>
+                                        <div
+                                            style="position: relative; display: inline-block; translate: none; rotate: none; scale: none; opacity: 1; visibility: inherit; transform: translate(0px, 0px);">
+                                            e</div>
+                                        <div
+                                            style="position: relative; display: inline-block; translate: none; rotate: none; scale: none; opacity: 1; visibility: inherit; transform: translate(0px, 0px);">
+                                            t</div>
+                                        <div
+                                            style="position: relative; display: inline-block; translate: none; rotate: none; scale: none; opacity: 1; visibility: inherit; transform: translate(0px, 0px);">
+                                            '</div>
+                                        <div
+                                            style="position: relative; display: inline-block; translate: none; rotate: none; scale: none; opacity: 1; visibility: inherit; transform: translate(0px, 0px);">
+                                            s</div>
+                                    </div>
+                                    <div style="position:relative;display:inline-block;">
+                                        <div
+                                            style="position: relative; display: inline-block; translate: none; rotate: none; scale: none; opacity: 1; visibility: inherit; transform: translate(0px, 0px);">
+                                            W</div>
+                                        <div
+                                            style="position: relative; display: inline-block; translate: none; rotate: none; scale: none; opacity: 1; visibility: inherit; transform: translate(0px, 0px);">
+                                            o</div>
+                                        <div
+                                            style="position: relative; display: inline-block; translate: none; rotate: none; scale: none; opacity: 1; visibility: inherit; transform: translate(0px, 0px);">
+                                            r</div>
+                                        <div
+                                            style="position: relative; display: inline-block; translate: none; rotate: none; scale: none; opacity: 1; visibility: inherit; transform: translate(0px, 0px);">
+                                            k</div>
+                                    </div>
+                                    <div style="position:relative;display:inline-block;">
+                                        <div
+                                            style="position: relative; display: inline-block; translate: none; rotate: none; scale: none; opacity: 1; visibility: inherit; transform: translate(0px, 0px);">
+                                            T</div>
+                                        <div
+                                            style="position: relative; display: inline-block; translate: none; rotate: none; scale: none; opacity: 1; visibility: inherit; transform: translate(0px, 0px);">
+                                            o</div>
+                                        <div
+                                            style="position: relative; display: inline-block; translate: none; rotate: none; scale: none; opacity: 1; visibility: inherit; transform: translate(0px, 0px);">
+                                            g</div>
+                                        <div
+                                            style="position: relative; display: inline-block; translate: none; rotate: none; scale: none; opacity: 1; visibility: inherit; transform: translate(0px, 0px);">
+                                            e</div>
+                                        <div
+                                            style="position: relative; display: inline-block; translate: none; rotate: none; scale: none; opacity: 1; visibility: inherit; transform: translate(0px, 0px);">
+                                            t</div>
+                                        <div
+                                            style="position: relative; display: inline-block; translate: none; rotate: none; scale: none; opacity: 1; visibility: inherit; transform: translate(0px, 0px);">
+                                            h</div>
+                                        <div
+                                            style="position: relative; display: inline-block; translate: none; rotate: none; scale: none; opacity: 1; visibility: inherit; transform: translate(0px, 0px);">
+                                            e</div>
+                                        <div
+                                            style="position: relative; display: inline-block; translate: none; rotate: none; scale: none; opacity: 1; visibility: inherit; transform: translate(0px, 0px);">
+                                            r</div>
+                                    </div>
+                                </h2>
+                                <h5 class="title-sm">SEND ME A MESSAGE</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row justify-content-center">
+                        <div class="col-12">
+                            <div class="footer__content text-center pt-120 pb-120">
+                                <h2 class="light-title-xl text-uppercase fw-5">
+                                    <a href="mailto:hello@exgridinfo.com" class="animated-text" style="opacity: 1;">
+                                        <div style="position:relative;display:inline-block;">
+                                            <div
+                                                style="position: relative; display: inline-block; translate: none; rotate: none; scale: none; transform-origin: 50% 100%; transform: translate(0px, 0px); color: rgb(24, 24, 24);">
+                                                h</div>
+                                            <div
+                                                style="position: relative; display: inline-block; translate: none; rotate: none; scale: none; transform-origin: 50% 100%; transform: translate(0px, 0px); color: rgb(24, 24, 24);">
+                                                e</div>
+                                            <div
+                                                style="position: relative; display: inline-block; translate: none; rotate: none; scale: none; transform-origin: 50% 100%; transform: translate(0px, 0px); color: rgb(24, 24, 24);">
+                                                l</div>
+                                            <div
+                                                style="position: relative; display: inline-block; translate: none; rotate: none; scale: none; transform-origin: 50% 100%; transform: translate(0px, 0px); color: rgb(24, 24, 24);">
+                                                l</div>
+                                            <div
+                                                style="position: relative; display: inline-block; translate: none; rotate: none; scale: none; transform-origin: 50% 100%; transform: translate(0px, 0px); color: rgb(24, 24, 24);">
+                                                o</div>
+                                            <div
+                                                style="position: relative; display: inline-block; translate: none; rotate: none; scale: none; transform-origin: 50% 100%; transform: translate(0px, 0px); color: rgb(24, 24, 24);">
+                                                @</div>
+                                            <div
+                                                style="position: relative; display: inline-block; translate: none; rotate: none; scale: none; transform-origin: 50% 100%; transform: translate(0px, 0px); color: rgb(24, 24, 24);">
+                                                e</div>
+                                            <div
+                                                style="position: relative; display: inline-block; translate: none; rotate: none; scale: none; transform-origin: 50% 100%; transform: translate3d(0px, 0px, 0px) scale(1, 0.9992); color: rgb(24, 24, 24);">
+                                                x</div>
+                                            <div
+                                                style="position: relative; display: inline-block; translate: none; rotate: none; scale: none; transform-origin: 50% 100%; transform: translate3d(0px, 0px, 0px) scale(1, 0.9988); color: rgb(24, 24, 24);">
+                                                g</div>
+                                            <div
+                                                style="position: relative; display: inline-block; translate: none; rotate: none; scale: none; transform-origin: 50% 100%; transform: translate3d(0px, 0px, 0px) scale(1, 0.9988); color: rgb(24, 24, 24);">
+                                                r</div>
+                                            <div
+                                                style="position: relative; display: inline-block; translate: none; rotate: none; scale: none; transform-origin: 50% 100%; transform: translate3d(0px, 0px, 0px) scale(1, 0.9993); color: rgb(24, 24, 24);">
+                                                i</div>
+                                            <div
+                                                style="position: relative; display: inline-block; translate: none; rotate: none; scale: none; transform-origin: 50% 100%; transform: translate3d(0px, 0px, 0px) scale(1, 1.0003); color: rgb(24, 24, 24);">
+                                                d</div>
+                                            <div
+                                                style="position: relative; display: inline-block; translate: none; rotate: none; scale: none; transform-origin: 50% 100%; transform: translate3d(0px, 0px, 0px) scale(1, 1.0015); color: rgb(24, 24, 24);">
+                                                i</div>
+                                            <div
+                                                style="position: relative; display: inline-block; translate: none; rotate: none; scale: none; transform-origin: 50% 100%; transform: translate3d(0px, 0px, 0px) scale(1, 1.0024); color: rgb(24, 24, 24);">
+                                                n</div>
+                                            <div
+                                                style="position: relative; display: inline-block; translate: none; rotate: none; scale: none; transform-origin: 50% 100%; transform: translate3d(0px, 0px, 0px) scale(1, 1.0025); color: rgb(24, 24, 24);">
+                                                f</div>
+                                            <div
+                                                style="position: relative; display: inline-block; translate: none; rotate: none; scale: none; transform-origin: 50% 100%; transform: translate3d(0px, 0px, 0px) scale(1, 1.0015); color: rgb(24, 24, 24);">
+                                                o</div>
+                                            <div
+                                                style="position: relative; display: inline-block; translate: none; rotate: none; scale: none; transform-origin: 50% 100%; transform: translate3d(0px, 0px, 0px) scale(1, 0.9994); color: rgb(24, 24, 24);">
+                                                .</div>
+                                            <div
+                                                style="position: relative; display: inline-block; translate: none; rotate: none; scale: none; transform-origin: 50% 100%; transform: translate3d(0px, 0px, 0px) scale(1, 0.997); color: rgb(24, 24, 24);">
+                                                c</div>
+                                            <div
+                                                style="position: relative; display: inline-block; translate: none; rotate: none; scale: none; transform-origin: 50% 100%; transform: translate3d(0px, 0px, 0px) scale(1, 0.9952); color: rgb(24, 24, 24);">
+                                                o</div>
+                                            <div
+                                                style="position: relative; display: inline-block; translate: none; rotate: none; scale: none; transform-origin: 50% 100%; transform: translate3d(0px, 0px, 0px) scale(1, 0.995); color: rgb(24, 24, 24);">
+                                                m</div>
+                                        </div>
+                                    </a>
+                                </h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer__copyright" data-background="assets/images/footer-bg.png"
+                    style="background-image: url(&quot;assets/images/footer-bg.png&quot;);">
+                    <div class="container">
+                        <div class="row align-items-center gaper">
+                            <div class="col-12 col-lg-8">
+                                <div class="footer__copyright-text text-center text-lg-start">
+                                    <p class="text-senary tertiary-text">
+                                        ©
+                                        <span id="copyYear">2024</span>
+                                        . All Rights Reserved
+                                        <a href="index.html" class="fw-6">Exgrid</a>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col-12 col-lg-4">
+                                <div class="social justify-content-center justify-content-lg-end">
+                                    <a href="https://www.twitter.com/" target="_blank">
+                                        <i class="fa-brands fa-twitter"></i>
+                                    </a>
+                                    <a href="https://www.instagram.com/" target="_blank">
+                                        <i class="fa-brands fa-instagram"></i>
+                                    </a>
+                                    <a href="https://www.facebook.com/" target="_blank">
+                                        <i class="fa-brands fa-facebook-messenger"></i>
+                                    </a>
+                                    <a href="https://www.youtube.com/" target="_blank">
+                                        <i class="fa-brands fa-youtube"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+            <!-- ==== / footer end ==== -->
         </div>
     </div>
 </div>

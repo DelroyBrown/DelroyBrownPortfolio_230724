@@ -1,0 +1,27 @@
+<!-- templates/projects/project_detail.html -->
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="container">
+    <h2>{{ project.project_name }}</h2>
+    <div class="row">
+        <div class="col-md-6">
+            <img src="{{ project.image_main.url }}" class="img-fluid" alt="{{ project.project_name }}">
+        </div>
+        <div class="col-md-6">
+            <p>{{ project.project_description }}</p>
+            <!-- Additional Images -->
+            {% if project.image_1 %}
+            <img src="{{ project.image_1.url }}" class="img-fluid" alt="{{ project.project_name }}">
+            {% endif %}
+            {% if project.image_2 %}
+            <img src="{{ project.image_2.url }}" class="img-fluid" alt="{{ project.project_name }}">
+            {% endif %}
+            {% if project.image_3 %}
+            <img src="{{ project.image_3.url }}" class="img-fluid" alt="{{ project.project_name }}">
+            {% endif %}
+        </div>
+    </div>
+</div>
+{% endblock %}
