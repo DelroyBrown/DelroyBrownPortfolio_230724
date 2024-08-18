@@ -62,32 +62,36 @@
                         </div>
                         <div class="row">
                             <div class="col-12">
-                               <div class="poster__slider-wrapper">
-                                  <div class="poster__slider">
-                                     <div class="poster__slider-single">
-                                        <img src="{{ project.image_main.url }}" alt="Image">
-                                     </div>
-                                     <div class="poster__slider-single">
-                                        <img src="{% static '' %}" alt="Image">
-                                     </div>
-                                     <div class="poster__slider-single">
-                                        <img src="assets/images/projects/poster.png" alt="Image">
-                                     </div>
-                                     <div class="poster__slider-single">
-                                        <img src="assets/images/projects/poster.png" alt="Image">
-                                     </div>
-                                  </div>
-                                  <div class="slide-group">
-                                     <button aria-label="previous item" class="slide-btn prev-project-d">
-                                     <i class="fa-solid fa-angle-left"></i>
-                                     </button>
-                                     <button aria-label="next item" class="slide-btn next-project-d">
-                                     <i class="fa-solid fa-angle-right"></i>
-                                     </button>
-                                  </div>
-                               </div>
+                                <div class="poster__slider-wrapper">
+                                    <div class="poster__slider">
+                                        <div class="poster__slider-single">
+                                            <img src="{{ project.image_main.url }}" alt="Image">
+                                        </div>
+                                        <div class="poster__slider-single">
+                                            <img src="{{ project.image_1.url }}" alt="Image">
+                                        </div>
+                                        {% if project.image_2 %}
+                                        <div class="poster__slider-single">
+                                            <img src="{{ project.image_2.url }}" alt="Image">
+                                        </div>
+                                        {% endif %}
+                                        {% if project.image_3 %}
+                                        <div class="poster__slider-single">
+                                            <img src="{{ project.image_3.url }}" alt="Image">
+                                        </div>
+                                        {% endif %}
+                                    </div>
+                                    <div class="slide-group">
+                                        <button aria-label="previous item" class="slide-btn prev-project-d">
+                                            <i class="fa-solid fa-angle-left"></i>
+                                        </button>
+                                        <button aria-label="next item" class="slide-btn next-project-d">
+                                            <i class="fa-solid fa-angle-right"></i>
+                                        </button>
+                                    </div>
+                                </div>
                             </div>
-                         </div>
+                        </div>
                         <div class="row gaper fade-wrapper">
                             <div class="col-12 col-sm-6 col-xl-4">
                                 <div class="project-d-o__single fade-top"
