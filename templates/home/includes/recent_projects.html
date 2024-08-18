@@ -23,83 +23,31 @@
             </div>
             <div class="col-12 col-lg-7">
                 <div class="recent__thumb">
+                    {% for project in projects %}
                     <div class="recent__single appear-down">
                         <div class="thumb">
                             <a href="javascript:void()">
-                                <img src="{% static 'images/project_images/bina-q.png' %}" alt="Image">
+                                <img src="{{ project.image_main.url }}" alt="Image">
                             </a>
                         </div>
                         <div class="content">
                             <h3 class="title-lg text-capitalize">
-                                <a href="case-study-single.html">BINA-Q</a>
-                            </h3>
-                            <p class="text-quaternary">BINA-Q, is advanced AI-driven software for healthcare. We link
-                                health data securely, offer wearable integration, and ensure privacy. Our goal is
-                                efficient, equitable healthcare by addressing modern challenges with innovative
-                                solutions.</p>
-                        </div>
-                        <hr>
-                        <div class="content-footer">
-                            <div class="content-footer__left">
-                                <a href="javascript:void()">Python/Django</a>
-                                <a href="javascript:void()">Web App</a>
-                            </div>
-                            <div class="content-footer__right">
-                                <a href="https://www.binaq.co.uk/" target="_blank">Visit Website</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="recent__single appear-down">
-                        <div class="thumb">
-                            <a href="javascript:void()">
-                                <img src="{% static 'images/project_images/atari.png' %}" alt="Image">
-                            </a>
-                        </div>
-                        <div class="content">
-                            <h3 class="title-lg text-capitalize">
-                                <a href="javascript:void()">Atari</a>
+                                <a href="javascript:void()">{{ project.project_name }}</a>
                             </h3>
                             <p class="text-quaternary">
-                                Dive into this retro Pong experience with a modern twist! Battle the AI, bounce the ball
-                                off your paddle, and groove to the quirky sound effects. Control your paddle with your
-                                mouse and outscore your opponent against a cool Atari backdrop. Game on!
+                                {{ project.project_description_short }}
                             </p>
                         </div>
                         <hr>
                         <div class="content-footer">
+                          
                             <div class="content-footer__left">
-                                <a href="javascript:void()">javaScript</a>
-                                <a href="javascript:void()">Arcade</a>
-                            </div>
-                            <div class="content-footer__right">
-                                <a href="https://github.com/DelroyBrown/Atari/blob/main/atari.js" target="_blank">View
-                                    Code</a>
+                                <a
+                                href="{% url 'DelroyBrownPortfolio_projects:project-detail' project.id %}" target="_blank">Visit Project</a>
                             </div>
                         </div>
                     </div>
-                    <div class="recent__single appear-down">
-                        <div class="thumb">
-                            <a href="javascript:void()">
-                                <img src="{% static 'images/project_images/reactDashboard.png' %}" alt="Image">
-                            </a>
-                        </div>
-                        <div class="content">
-                            <h3 class="title-lg text-capitalize">
-                                <a href="javascript:void()">ReactDash</a>
-                            </h3>
-                            <p class="text-quaternary">Developed a dynamic invoice and business management dashboard using React. The application streamlines invoice tracking, client management, and financial reporting, providing an intuitive and efficient interface for business operations.‍</p>
-                        </div>
-                        <hr>
-                        <div class="content-footer">
-                            <div class="content-footer__left">
-                                <a href="javascript:void()">React</a>
-                                <a href="javascript:void()">Web App</a>
-                            </div>
-                            <div class="content-footer__right">
-                                <a href="https://github.com/DelroyBrown/React-Admin" target="_blank">View Code</a>
-                            </div>
-                        </div>
-                    </div>
+                    {% endfor %}
                     <!-- <div class="recent__single appear-down">
                         <div class="thumb">
                             <a href="javascript:void()">

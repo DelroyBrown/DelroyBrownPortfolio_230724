@@ -1,5 +1,7 @@
 from django.shortcuts import render
+from DelroyBrownPortfolio_projects.models import ProjectDetails
 
 
 def home(request):
-    return render(request, "home/home.html")
+    projects = ProjectDetails.objects.all()
+    return render(request, "home/home.html", {"projects": projects})
