@@ -3,6 +3,17 @@
 {% load static %}
 
 {% block content %}
+<style>
+    .view-project-btn {
+        color: #9BDEAC;
+        transition: 0.3s;
+    }
+
+    .view-project-btn:hover {
+        opacity: 0.5;
+    }
+</style>
+
 <div class="my-app">
     <!-- HEADER -->
     {% include 'common_includes/header_2.html' %}
@@ -18,8 +29,12 @@
                 <section class="pb-120 cmn-banner">
                     <div class="container">
                         <div class="row">
-                            <div class="col-12">
+                            <div class="col-12 text-center">
                                 <h1 class="text-center">{{ project.project_name }}</h1>
+                                <a class="view-project-btn" style="color: #9BDEAC;" href="{{ project.link_to_project }}"
+                                    target="_blank">
+                                    View Project
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -85,7 +100,7 @@
                                 </div>
                             </div>
                         </div>
-                  
+
                         <div class="row">
                             <div class="col-12">
                                 <div class="details-group text-start section__content-cta">
@@ -93,18 +108,18 @@
                                     <p>
                                         {{ project.project_description_long }}
                                     </p>
-                                
+
                                 </div>
                             </div>
                         </div>
-                 
+
                     </div>
-           
+
                 </section>
                 <!-- ==== / project details end ==== -->
             </main>
             <!-- FOOTER -->
-         {% include 'common_includes/footer_2.html' %}
+            {% include 'common_includes/footer_2.html' %}
         </div>
     </div>
 </div>

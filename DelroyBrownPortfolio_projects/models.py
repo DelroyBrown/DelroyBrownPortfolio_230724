@@ -13,6 +13,7 @@ class ProjectDetails(models.Model):
     project_name = models.CharField(max_length=25, blank=False, null=False, default="")
     project_description_short = models.TextField(blank=False, null=False, default="")
     project_description_long = models.TextField(blank=False, null=False, default="")
+    link_to_project = models.URLField(blank=True, null=True)
     image_main = models.ImageField(upload_to="project-images", blank=False, null=False)
     image_1 = models.ImageField(upload_to="project-images", blank=False, null=False)
     image_2 = models.ImageField(upload_to="project-images", blank=True, null=True)
