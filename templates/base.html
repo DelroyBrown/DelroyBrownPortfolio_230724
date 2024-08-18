@@ -18,7 +18,13 @@
     <link rel="stylesheet" href="{% static 'home/css/main.min.css' %}">
 </head>
 <body>
-
+    <div id="preloader">
+        <div id="loader"></div>
+    </div>
+    <div class="mouseCursor cursor-outer"></div>
+    <div class="mouseCursor cursor-inner">
+        <span>Drag</span>
+    </div>
     {% block content %}
     {% endblock %}
 

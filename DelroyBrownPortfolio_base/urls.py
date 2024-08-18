@@ -9,4 +9,5 @@ urlpatterns = [
     path("", include("DelroyBrownPortfolio_home.urls")),
     path("", include("DelroyBrownPortfolio_about.urls")),
     path("", include("DelroyBrownPortfolio_contact.urls")),
+    path("", include("DelroyBrownPortfolio_projects.urls")),
 ]

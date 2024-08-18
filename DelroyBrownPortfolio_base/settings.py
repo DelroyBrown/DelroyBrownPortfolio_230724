@@ -27,6 +27,7 @@ INSTALLED_APPS = [
     "DelroyBrownPortfolio_home",
     "DelroyBrownPortfolio_about",
     "DelroyBrownPortfolio_contact",
+    "DelroyBrownPortfolio_projects",
 ]
 
 MIDDLEWARE = [
