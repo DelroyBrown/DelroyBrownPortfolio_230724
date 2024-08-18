@@ -40,15 +40,15 @@
                             <div class="col-12 col-lg-6">
                                 <div class="project-d-group">
                                     <h3>What's Used:</h3>
-                                    <p>It is a long established fact that a reader will be distracted by the readable
-                                        content of a page when looking at its layout. The point of using Lorem Ipsum.
+                                    <p>
+                                        {{ project.prog_language_reason }}
                                     </p>
                                     <ul>
+                                        {% for language in project.prog_languages_used.all %}
                                         <li>
-                                            Geographical diversity, project complexity
+                                            {{ language.language_name }}
                                         </li>
-                                        <li>Whether building on land or over water</li>
-                                        <li>Construction companies respond to the unique needs</li>
+                                        {% endfor %}
                                     </ul>
                                 </div>
                             </div>
